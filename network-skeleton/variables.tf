@@ -35,13 +35,13 @@ variable "private_subnet_cidrs" {
 }
 
 variable "allowed_cidr_blocks" {
-  description = "Allowed CIDR blocks for ALB."
+  description = "CIDR blocks allowed to access ALB on port 80."
   type        = list(string)
   default     = ["0.0.0.0/0"]
 }
 
 variable "container_image" {
-  description = "Docker image."
+  description = "Docker image to run in ECS Fargate."
   type        = string
   default     = "nginx:latest"
 }
